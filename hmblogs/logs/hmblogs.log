@@ -1,0 +1,153 @@
+2024-04-11 10:02:20.413 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 13796 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-11 10:02:20.428 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-11 10:02:22.201 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-11 10:02:22.312 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 101 ms. Found 1 MongoDB repository interfaces.
+2024-04-11 10:02:23.972 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-11 10:02:23.999 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-11 10:02:24.000 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-11 10:02:24.001 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-11 10:02:24.539 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-11 10:02:24.540 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3888 ms
+2024-04-11 10:02:24.842 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-11 10:02:25.083 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-11 10:02:29.323 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-11 10:02:32.045 [cluster-ClusterId{value='661744b5c0ea6f7c46ece0bf', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-11 10:02:34.540 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-11 10:02:34.999 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-11 10:02:35.015 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 16.585 seconds (JVM running for 21.459)
+2024-04-11 10:03:26.854 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-11 10:03:26.855 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-04-11 10:03:26.857 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2024-04-11 10:03:26.925 [http-nio-8081-exec-2] INFO  [com.hmblogs.backend.controller.MemcachedController] - aaaa
+2024-04-11 10:03:26.926 [http-nio-8081-exec-2] INFO  [com.hmblogs.backend.controller.MemcachedController] - bbbb
+2024-04-11 10:03:26.935 [http-nio-8081-exec-2] INFO  [net.rubyeye.xmemcached.XMemcachedClient] - XMemcachedClient is using Binary protocol
+2024-04-11 10:03:26.973 [http-nio-8081-exec-2] INFO  [net.rubyeye.xmemcached.XMemcachedClient] - XMemcachedClient in failure mode.
+2024-04-11 10:03:26.975 [http-nio-8081-exec-2] INFO  [com.google.code.yanf4j.nio.impl.SelectorManager] - Creating 8 reactors...
+2024-04-11 10:03:28.028 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - The Controller started at localhost/127.0.0.1:0 ...
+2024-04-11 10:03:30.376 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:32.399 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:32.621 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:34.655 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:34.886 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:36.894 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 2 times
+2024-04-11 10:03:37.149 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:39.154 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:39.415 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:41.406 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 2 times
+2024-04-11 10:03:41.658 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:43.674 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:43.947 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:45.951 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:46.189 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:48.180 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 3 times
+2024-04-11 10:03:48.470 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:50.418 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 2 times
+2024-04-11 10:03:50.720 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:52.654 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:52.957 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:54.917 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:03:55.218 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:57.177 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 3 times
+2024-04-11 10:03:57.447 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:03:59.418 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 2 times
+2024-04-11 10:03:59.712 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 10:04:01.669 [Heal-Session-Thread] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Trying to connect to 43.138.0.199:11211 for 1 times
+2024-04-11 10:04:01.990 [http-nio-8081-exec-2] INFO  [c.google.code.yanf4j.core.impl.AbstractController] - Add a session: 43.138.0.199:11211
+2024-04-11 15:09:38.816 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 28248 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-11 15:09:38.882 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-11 15:09:40.329 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-11 15:09:40.485 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 141 ms. Found 1 MongoDB repository interfaces.
+2024-04-11 15:09:42.299 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-11 15:09:42.324 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-11 15:09:42.326 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-11 15:09:42.327 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-11 15:09:42.794 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-11 15:09:42.794 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3758 ms
+2024-04-11 15:09:43.218 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-11 15:09:43.440 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-11 15:09:47.299 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-11 15:09:49.494 [cluster-ClusterId{value='66178cbb6cd6813b8f91e5b5', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-11 15:09:52.163 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-11 15:09:52.809 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-11 15:09:52.822 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 15.645 seconds (JVM running for 19.149)
+2024-04-11 15:15:38.072 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-11 15:15:38.074 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-11 15:54:45.874 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 20824 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-11 15:54:45.890 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-11 15:54:47.207 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-11 15:54:47.359 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 137 ms. Found 1 MongoDB repository interfaces.
+2024-04-11 15:54:48.962 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-11 15:54:48.980 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-11 15:54:48.983 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-11 15:54:48.984 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-11 15:54:49.243 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-11 15:54:49.243 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3139 ms
+2024-04-11 15:54:49.482 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-11 15:54:49.675 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-11 15:54:52.078 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-11 15:54:54.327 [cluster-ClusterId{value='6617974c60f218674476daae', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-11 15:54:55.685 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-11 15:54:56.373 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-11 15:54:56.383 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 12.257 seconds (JVM running for 15.523)
+2024-04-11 15:55:20.771 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-11 15:55:20.771 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-04-11 15:55:20.774 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 3 ms
+2024-04-11 15:55:21.156 [http-nio-8081-exec-2] INFO  [com.hmblogs.backend.controller.MemcachedController] - Connection to server successful.
+2024-04-11 15:55:23.685 [http-nio-8081-exec-2] INFO  [com.hmblogs.backend.controller.MemcachedController] - cuowule:Timed out waiting for operation

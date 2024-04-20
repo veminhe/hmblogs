@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmblogs.backend.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.hmblogs.backend.entity.User">
+        <id column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="password" property="password"/>
+        <result column="user_remark" property="userRemark"/>
+    </resultMap>
+
+    <sql id="allColumns">
+        user_id, user_name, password, user_remark
+    </sql>
+
+    <select id="findUser" parameterType="com.hmblogs.backend.entity.User"
+            resultMap="BaseResultMap">
+        select
+        <include refid="allColumns"/>
+        from t_user
+        where user_name=#{userName}
+        and password=#{password}
+    </select>
+
+</mapper>

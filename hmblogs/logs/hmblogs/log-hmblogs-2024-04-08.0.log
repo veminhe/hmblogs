@@ -1,0 +1,292 @@
+2024-04-08 16:42:09.621 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hmblogs.backend.util.BeanTest], using SpringBootContextLoader
+2024-04-08 16:42:09.633 [main] INFO  [o.s.test.context.support.AbstractContextLoader] - Could not detect default resource locations for test class [com.hmblogs.backend.util.BeanTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-08 16:42:09.634 [main] INFO  [o.s.t.c.support.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.hmblogs.backend.util.BeanTest]: BeanTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-08 16:42:09.874 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.hmblogs.backend.BackendApplication for test class com.hmblogs.backend.util.BeanTest
+2024-04-08 16:42:10.022 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-04-08 16:42:10.045 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@15043a2f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a83a74a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1349883, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b29d1d2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7f485fda, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28261e8e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d737b89, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8519cb4, org.springframework.test.context.event.EventPublishingTestExecutionListener@35dab4eb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d901eb0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3ba987b8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f191845, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f049ea1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@72cc7e6f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5afa3c9]
+2024-04-08 16:42:10.451 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Starting BeanTest using Java 1.8.0_131 on ISS-67 with PID 19988 (started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 16:42:10.452 [main] INFO  [com.hmblogs.backend.util.BeanTest] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 16:42:11.298 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 16:42:11.356 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 51 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 16:42:12.262 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 16:42:12.580 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 16:42:16.013 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-08 16:42:18.154 [cluster-ClusterId{value='6613ade710351627613a29ba', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-08 16:42:20.665 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Started BeanTest in 10.57 seconds (JVM running for 12.27)
+2024-04-08 16:42:20.981 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 16:42:20.982 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 16:55:38.115 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hmblogs.backend.util.BeanTest], using SpringBootContextLoader
+2024-04-08 16:55:38.121 [main] INFO  [o.s.test.context.support.AbstractContextLoader] - Could not detect default resource locations for test class [com.hmblogs.backend.util.BeanTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-08 16:55:38.123 [main] INFO  [o.s.t.c.support.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.hmblogs.backend.util.BeanTest]: BeanTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-08 16:55:38.297 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.hmblogs.backend.BackendApplication for test class com.hmblogs.backend.util.BeanTest
+2024-04-08 16:55:38.431 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-04-08 16:55:38.448 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79e4c792, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@196a42c3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4c60d6e9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@15043a2f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4a83a74a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1349883, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b29d1d2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f485fda, org.springframework.test.context.event.EventPublishingTestExecutionListener@28261e8e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d737b89, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@8519cb4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@35dab4eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d901eb0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3ba987b8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3f191845]
+2024-04-08 16:55:38.817 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Starting BeanTest using Java 1.8.0_131 on ISS-67 with PID 17740 (started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 16:55:38.818 [main] INFO  [com.hmblogs.backend.util.BeanTest] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 16:55:39.780 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 16:55:39.849 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 60 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 16:55:40.910 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 16:55:41.166 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 16:55:44.758 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-08 16:55:46.879 [cluster-ClusterId{value='6613b110586dbd7a060a5f24', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-08 16:55:49.942 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Started BeanTest in 11.451 seconds (JVM running for 12.969)
+2024-04-08 16:55:50.673 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 298ms} 
+2024-04-08 16:55:50.675 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-04-08 16:55:50.675 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 16:55:50.676 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 16:55:50.676 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 16:55:50.678 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-04-08 16:55:50.682 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-04-08 16:55:50.686 [Druid-ConnectionPool-Create-50826412] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-04-08 16:55:50.690 [main] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 16:55:50.691 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 16:55:50.692 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-04-08 16:55:50.736 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-04-08 16:55:50.737 [main] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@42066f0d
+2024-04-08 16:55:50.740 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "xxxxxxx") returned 
+2024-04-08 16:55:50.740 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "fdsafadsfadsfdasf") returned 
+2024-04-08 16:55:50.741 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "No cookies found.") returned 
+2024-04-08 16:55:50.741 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "No cookies found.") returned 
+2024-04-08 16:55:50.741 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 16:55:50.763 [main] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('xxxxxxx','fdsafadsfadsfdasf','No cookies found.',now(),'No cookies found.',now())  {executed in 20 ms}
+2024-04-08 16:55:50.764 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-04-08 16:55:50.764 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-04-08 16:55:50.764 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-04-08 16:55:50.766 [main] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-04-08 16:55:50.766 [main] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 16:55:50.812 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 16:55:50.825 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 11ms} 
+2024-04-08 16:55:50.826 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-04-08 16:55:50.827 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 17:03:12.440 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hmblogs.backend.util.BeanTest], using SpringBootContextLoader
+2024-04-08 17:03:12.446 [main] INFO  [o.s.test.context.support.AbstractContextLoader] - Could not detect default resource locations for test class [com.hmblogs.backend.util.BeanTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-08 17:03:12.447 [main] INFO  [o.s.t.c.support.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.hmblogs.backend.util.BeanTest]: BeanTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-08 17:03:12.655 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.hmblogs.backend.BackendApplication for test class com.hmblogs.backend.util.BeanTest
+2024-04-08 17:03:12.781 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-04-08 17:03:12.797 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79e4c792, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@196a42c3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4c60d6e9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@15043a2f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4a83a74a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1349883, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b29d1d2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f485fda, org.springframework.test.context.event.EventPublishingTestExecutionListener@28261e8e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d737b89, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@8519cb4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@35dab4eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d901eb0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3ba987b8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3f191845]
+2024-04-08 17:03:13.138 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Starting BeanTest using Java 1.8.0_131 on ISS-67 with PID 26412 (started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 17:03:13.139 [main] INFO  [com.hmblogs.backend.util.BeanTest] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 17:03:13.877 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 17:03:13.959 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 73 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 17:03:14.835 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 17:03:15.094 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 17:03:18.296 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-08 17:03:20.441 [cluster-ClusterId{value='6613b2d6cf57ec388f553eee', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-08 17:03:22.460 [main] INFO  [com.hmblogs.backend.util.BeanTest] - Started BeanTest in 9.62 seconds (JVM running for 11.181)
+2024-04-08 17:03:22.958 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 216ms} 
+2024-04-08 17:03:22.960 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-04-08 17:03:22.960 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 17:03:22.960 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 17:03:22.960 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 17:03:22.961 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-04-08 17:03:22.965 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-04-08 17:03:22.969 [Druid-ConnectionPool-Create-1138356642] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-04-08 17:03:22.974 [main] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 17:03:22.974 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 17:03:22.975 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-04-08 17:03:23.001 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-04-08 17:03:23.001 [main] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@687e561b
+2024-04-08 17:03:23.003 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "222222222") returned 
+2024-04-08 17:03:23.003 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "22222sasadsdas") returned 
+2024-04-08 17:03:23.004 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "No cookies found.") returned 
+2024-04-08 17:03:23.004 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "No cookies found.") returned 
+2024-04-08 17:03:23.004 [main] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 17:03:23.025 [main] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('222222222','22222sasadsdas','No cookies found.',now(),'No cookies found.',now())  {executed in 20 ms}
+2024-04-08 17:03:23.026 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-04-08 17:03:23.026 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-04-08 17:03:23.026 [main] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-04-08 17:03:23.027 [main] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-04-08 17:03:23.027 [main] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 17:03:23.063 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 17:03:23.076 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 11ms} 
+2024-04-08 17:03:23.076 [SpringApplicationShutdownHook] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 
+2024-04-08 17:03:23.077 [SpringApplicationShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 19:37:49.457 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [mode.observe.ObserveMain], using SpringBootContextLoader
+2024-04-08 19:37:49.463 [main] INFO  [o.s.test.context.support.AbstractContextLoader] - Could not detect default resource locations for test class [mode.observe.ObserveMain]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-08 19:37:49.464 [main] INFO  [o.s.t.c.support.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [mode.observe.ObserveMain]: ObserveMain does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-08 19:41:28.483 [main] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [mode.observe.ObserveMain], using SpringBootContextLoader
+2024-04-08 19:41:28.490 [main] INFO  [o.s.test.context.support.AbstractContextLoader] - Could not detect default resource locations for test class [mode.observe.ObserveMain]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-04-08 19:41:28.491 [main] INFO  [o.s.t.c.support.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [mode.observe.ObserveMain]: ObserveMain does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-08 19:41:48.632 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 19020 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 19:41:48.656 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 19:41:50.104 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 19:41:50.303 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 179 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 19:41:52.058 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-08 19:41:52.079 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-08 19:41:52.082 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-08 19:41:52.083 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-08 19:41:52.344 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-08 19:41:52.344 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3429 ms
+2024-04-08 19:41:52.610 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 19:41:52.831 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 19:41:55.169 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 19:41:55.170 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 19:41:55.172 [main] INFO  [org.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2024-04-08 19:41:55.184 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-08 19:42:32.064 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 28208 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 19:42:32.111 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 19:42:33.892 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 19:42:34.079 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 166 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 19:42:36.396 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-08 19:42:36.420 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-08 19:42:36.424 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-08 19:42:36.424 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-08 19:42:36.700 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-08 19:42:36.700 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 4143 ms
+2024-04-08 19:42:37.023 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 19:42:37.290 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 19:42:39.798 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 19:42:39.799 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 19:42:39.801 [main] INFO  [org.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2024-04-08 19:42:39.814 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-08 19:45:06.547 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 22884 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 19:45:06.578 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 19:45:07.547 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 19:45:07.601 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 49 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 19:45:08.477 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-08 19:45:08.486 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-08 19:45:08.487 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-08 19:45:08.488 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-08 19:45:08.721 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-08 19:45:08.721 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1991 ms
+2024-04-08 19:45:08.928 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 19:45:09.084 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 19:45:11.020 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closing ...
+2024-04-08 19:45:11.021 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
+2024-04-08 19:45:11.024 [main] INFO  [org.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2024-04-08 19:45:11.034 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-08 19:49:42.171 [main] INFO  [com.hmblogs.backend.BackendApplication] - Starting BackendApplication using Java 1.8.0_131 on ISS-67 with PID 27008 (D:\workspace\hmblogs\target\classes started by iss-67 in D:\workspace\hmblogs)
+2024-04-08 19:49:42.197 [main] INFO  [com.hmblogs.backend.BackendApplication] - No active profile set, falling back to 1 default profile: "default"
+2024-04-08 19:49:43.441 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-04-08 19:49:43.514 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 67 ms. Found 1 MongoDB repository interfaces.
+2024-04-08 19:49:44.771 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8081 (http)
+2024-04-08 19:49:44.782 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-08 19:49:44.783 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2024-04-08 19:49:44.783 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-04-08 19:49:45.105 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring embedded WebApplicationContext
+2024-04-08 19:49:45.105 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2684 ms
+2024-04-08 19:49:45.422 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] - Init DruidDataSource
+2024-04-08 19:49:45.592 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2024-04-08 19:49:47.898 [main] INFO  [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-04-08 19:49:50.575 [cluster-ClusterId{value='6613d9db4257ba07b391bc1b', description='null'}-localhost:27017] INFO  [org.mongodb.driver.cluster] - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2024-04-08 19:49:51.507 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2024-04-08 19:49:52.164 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8081 (http) with context path '/hmblogs'
+2024-04-08 19:49:52.177 [main] INFO  [com.hmblogs.backend.BackendApplication] - Started BackendApplication in 11.526 seconds (JVM running for 14.773)
+2024-04-08 19:51:13.521 [http-nio-8081-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/hmblogs]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-08 19:51:13.521 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2024-04-08 19:51:13.523 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2024-04-08 19:51:14.112 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection opened. {executed in 387ms} 
+2024-04-08 19:51:14.113 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.new Connection returned 
+2024-04-08 19:51:14.113 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 19:51:14.113 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 19:51:14.114 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 19:51:14.115 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.getHoldability() returned 2
+2024-04-08 19:51:14.118 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.isReadOnly() returned false
+2024-04-08 19:51:14.122 [Druid-ConnectionPool-Create-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.getTransactionIsolation() returned 4
+2024-04-08 19:51:14.122 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 19:51:14.124 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 19:51:14.126 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getCatalog() returned hmblogs
+2024-04-08 19:51:14.177 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.new PreparedStatement returned 
+2024-04-08 19:51:14.177 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.prepareStatement(insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime)
+        values(?,?,?,now(),?,now())) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@716e1fc0
+2024-04-08 19:51:14.184 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(1, "多数据源学习") returned 
+2024-04-08 19:51:14.184 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(2, "北京444") returned 
+2024-04-08 19:51:14.184 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(3, "heming") returned 
+2024-04-08 19:51:14.185 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.setString(4, "heming") returned 
+2024-04-08 19:51:14.185 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.getAutoCommit() returned true
+2024-04-08 19:51:14.224 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. insert into t_blog(blog_title,blog_content,created_by,created_datetime,last_updated_by,last_updated_datetime) 
+values('多数据源学习','北京444','heming',now(),'heming',now())  {executed in 36 ms}
+2024-04-08 19:51:14.224 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.execute() returned false
+2024-04-08 19:51:14.224 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.getUpdateCount() returned 1
+2024-04-08 19:51:14.225 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. PreparedStatement.close() returned 
+2024-04-08 19:51:14.226 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.clearWarnings() returned 
+2024-04-08 19:51:14.226 [http-nio-8081-exec-2] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 20:34:53.607 [Druid-ConnectionPool-Destroy-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.isClosed() returned false
+2024-04-08 20:34:53.623 [Druid-ConnectionPool-Destroy-890525812] INFO  [log4jdbc.log4j2] - 1. Connection closed. {executed in 13ms} 
+2024-04-08 20:34:53.623 [Druid-ConnectionPool-Destroy-890525812] INFO  [log4jdbc.log4j2] - 1. Connection.close() returned 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmblogs.backend.dao.StockMapper">
+    <resultMap id="BaseResultMap" type="com.hmblogs.backend.entity.Stock">
+        <id column="id" property="id"/>
+        <result column="quantity" property="quantity"/>
+    </resultMap>
+
+    <sql id="BaseResultMap">
+        id, quantity
+    </sql>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="BaseResultMap"/>
+        from t_stock
+
+    </select>
+
+    <select id="findById" resultMap="BaseResultMap"  parameterType="com.hmblogs.backend.entity.Stock">
+        select
+        <include refid="BaseResultMap"/>
+        from t_stock
+        where id=#{id}
+    </select>
+
+    <update id="updateStockById" parameterType="com.hmblogs.backend.entity.Stock">
+        update t_stock set quantity=quantity-1 where id=#{id}
+    </update>
+
+    <select id="invokeStockProdudure" statementType="CALLABLE" parameterType="java.util.Map" resultType="java.util.Map">
+        CALL stock_produdure(
+            #{id1,mode=IN,jdbcType=INTEGER},
+            #{quantity1,mode=IN,jdbcType=INTEGER},
+            #{id2,mode=IN,jdbcType=INTEGER},
+            #{quantity2,mode=IN,jdbcType=INTEGER},
+            #{result,mode=OUT,jdbcType=INTEGER}
+            );
+    </select>
+
+</mapper>
